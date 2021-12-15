@@ -1,0 +1,216 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DAD3502-9030-4B18-AE0B-F5919AC47583}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDienThoaiCDIO5</RootNamespace>
+    <AssemblyName>WebDienThoaiCDIO5</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\admin\progress.css" />
+    <Content Include="css\admin\style.css" />
+    <Content Include="css\MasterPage.css" />
+    <Content Include="default.aspx" />
+    <Content Include="img\banners\banner0.gif" />
+    <Content Include="img\banners\banner1.png" />
+    <Content Include="img\banners\banner2.png" />
+    <Content Include="img\banners\banner3.png" />
+    <Content Include="img\banners\banner4.png" />
+    <Content Include="img\banners\banner5.png" />
+    <Content Include="img\banners\banner6.png" />
+    <Content Include="img\banners\banner7.png" />
+    <Content Include="img\banners\banner8.png" />
+    <Content Include="img\banners\banner9.png" />
+    <Content Include="img\banners\blackFriday.gif" />
+    <Content Include="img\banners\gsct.png" />
+    <Content Include="img\chitietsanpham\1-1.jpg" />
+    <Content Include="img\chitietsanpham\box.png" />
+    <Content Include="img\chitietsanpham\clock-152067_960_720.png" />
+    <Content Include="img\chitietsanpham\icon-baohanh.png" />
+    <Content Include="img\chitietsanpham\icon-tick.png" />
+    <Content Include="img\chitietsanpham\oppo-f9-mau-do-1-org.jpg" />
+    <Content Include="img\chitietsanpham\oppo-f9-mau-do-2-org.jpg" />
+    <Content Include="img\chitietsanpham\oppo-f9-mau-do-3-org.jpg" />
+    <Content Include="img\chitietsanpham\oppo-f9-red-2-400x460.png" />
+    <Content Include="img\company\Apple.jpg" />
+    <Content Include="img\company\Coolpad.png" />
+    <Content Include="img\company\HTC.jpg" />
+    <Content Include="img\company\Huawei.jpg" />
+    <Content Include="img\company\Itel.jpg" />
+    <Content Include="img\company\Mobell.jpg" />
+    <Content Include="img\company\Mobiistar.jpg" />
+    <Content Include="img\company\Motorola.jpg" />
+    <Content Include="img\company\Nokia.jpg" />
+    <Content Include="img\company\Oppo.jpg" />
+    <Content Include="img\company\Philips.jpg" />
+    <Content Include="img\company\Realme.png" />
+    <Content Include="img\company\Samsung.jpg" />
+    <Content Include="img\company\Vivo.jpg" />
+    <Content Include="img\company\Xiaomi.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\footer\footer1.png" />
+    <Content Include="img\footer\footer2.png" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\products\huawei-mate-20-pro-green-600x600.jpg" />
+    <Content Include="img\products\huawei-nova-3-2-600x600.jpg" />
+    <Content Include="img\products\huawei-y5-2017-300x300.jpg" />
+    <Content Include="img\products\ipad-wifi-32gb-2018-thumb-600x600.jpg" />
+    <Content Include="img\products\iphone-7-plus-32gb-hh-600x600.jpg" />
+    <Content Include="img\products\iphone-x-256gb-silver-400x400.jpg" />
+    <Content Include="img\products\mobiistar-b310-orange-600x600.jpg" />
+    <Content Include="img\products\mobiistar-e-selfie-300-1copy-600x600.jpg" />
+    <Content Include="img\products\mobiistar-x-3-600x600.jpg" />
+    <Content Include="img\products\mobiistar-zumbo-s2-dual-300x300.jpg" />
+    <Content Include="img\products\nokia-51-plus-black-18thangbh-400x400.jpg" />
+    <Content Include="img\products\oppo-a3s-32gb-600x600.jpg" />
+    <Content Include="img\products\oppo-f9-red-600x600.jpg" />
+    <Content Include="img\products\samsung-galaxy-a8-plus-2018-gold-600x600.jpg" />
+    <Content Include="img\products\samsung-galaxy-j4-plus-pink-400x400.jpg" />
+    <Content Include="img\products\samsung-galaxy-j8-600x600-600x600.jpg" />
+    <Content Include="img\products\xiaomi-mi-8-1-600x600.jpg" />
+    <Content Include="img\products\xiaomi-mi-8-lite-black-1-600x600.jpg" />
+    <Content Include="img\products\xiaomi-redmi-5-plus-600x600.jpg" />
+    <Content Include="img\products\xiaomi-redmi-note-5-pro-600x600.jpg" />
+    <Content Include="img\tintuc\tintuc1.png" />
+    <Content Include="img\tintuc\tintuc2.png" />
+    <Content Include="img\tintuc\tintuc3.png" />
+    <Content Include="img\tintuc\tintuc4.png" />
+    <Content Include="img\tintuc\tintuc5.png" />
+    <Content Include="js\MasterPage.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebDienThoai.Master.cs">
+      <DependentUpon>WebDienThoai.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebDienThoai.Master.designer.cs">
+      <DependentUpon>WebDienThoai.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WebDienThoai.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50666/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
