@@ -17,7 +17,7 @@ namespace WebDienThoaiCDIO5
         {
             if (Page.IsPostBack)
                 return;
-            string sqlStr = "select * from Product";
+            string sqlStr = "select * from Book";
             DataTable dt = new DataTable();
             try
             {
