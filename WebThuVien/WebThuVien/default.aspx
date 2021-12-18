@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebDienThoai.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebDienThoaiCDIO5._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebThuVien.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="WebDienThoaiCDIO5._default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>

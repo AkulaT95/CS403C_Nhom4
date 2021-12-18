@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebDienThoai.master.cs" Inherits="WebDienThoaiCDIO5.WebDienThoai" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebThuVien.Master.cs" Inherits="WebDienThoaiCDIO5.WebDienThoai" %>
 
 <!DOCTYPE html>
 
