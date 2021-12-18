@@ -27,13 +27,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar sticky-top navbar-default">
+        <nav class="navbar sticky-top navbar-default" style="height: 200px;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
-                        <img src="img/logo.jpg" alt="Logo" /></a>
+                        <img src="img/logo.jpg" alt="Logo" style="width: 175px; height: 175px;" /></a>
                 </div>
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="padding-top: 50px; padding-left: 125px;">
                     <li class="navbar-item active"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Trang chủ</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Tin tức</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Tuyển dụng</a></li>
@@ -41,17 +41,25 @@
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-wrench"></span>&nbsp;Bảo hành</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Liên hệ</a></li>
                 </ul>
-                <ul class=" nav navbar-nav navbar-right" style="margin: auto">
+                <ul class=" nav navbar-nav navbar-right" style="padding-top: 50px; padding-right: 50px;">
                     <li>
                         <button type="button" data-toggle="modal" data-target="#loginModal" class="nav-link h3"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</button></li>
                 </ul>
-                <div class="navbar-form navbar-right">
-                    <button style="float: right" type="submit">Tìm kiếm</button>
-                    <input style="float: right" type="text" placeholder="Nhập nội dung tìm kiếm" />
+                <%--                <div class="navbar-form navbar-right" style="padding-top: 50px; padding-right: 50px;">
+                      <button style="float: right; height: 40px;" type="submit">Tìm kiếm</button>
+                    <input style="float: right; height: 40px;" type="text" placeholder="Nhập nội dung tìm kiếm" />
+                </div>--%>
+                <div class="input-group" style="float:right; padding-top:75px; padding-right:75px;">
+                    <div class="form-outline" style="float:left;">
+                        <input type="search" id="form1" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="button" class="btn btn-primary" style="float:left;">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
                 </div>
             </div>
         </nav>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%;background-color:white;">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -66,18 +74,18 @@
             </ol>
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner">
+            <div class="carousel-inner" style>
                 <div class="item active">
-                    <img class="d-block w-100" src="img/banners/banner1.png" alt="Hinh banner 1" />
+                    <img class="d-block w-100" src="img/banners/1.jpg" alt="Hinh banner 1" />
                 </div>
                 <div class="item">
-                    <img class="d-block w-100" src="img/banners/banner2.png" alt="Banner 2" />
+                    <img class="d-block w-100" src="img/banners/2.jpg" alt="Banner 2" />
                 </div>
                 <div class="item">
-                    <img class="d-block w-100" src="img/banners/banner3.png" alt="Banner 3" />
+                    <img class="d-block w-100" src="img/banners/3.jpg" alt="Banner 3" />
                 </div>
                 <div class="item">
-                    <img class="d-block w-100" src="img/banners/banner4.png" alt="Banner 4" />
+                    <img class="d-block w-100" src="img/banners/4.jpg" alt="Banner 4" />
                 </div>
                 <div class="item">
                     <img class="d-block w-100" src="img/banners/banner5.png" alt="Banner 5" />
