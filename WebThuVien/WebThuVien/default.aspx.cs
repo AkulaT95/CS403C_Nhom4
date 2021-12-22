@@ -17,15 +17,15 @@ namespace WebDienThoaiCDIO5
         {
             if (Page.IsPostBack)
                 return;
-            string sqlStr = "select * from Book";
-            DataTable dt = new DataTable();
+            string sqlStr = "select * from Book", sqlStr2= "select id,password from tblUser union select id,password from Admin union select id, password from Librarian";
+            DataTable dt, dt2;
             try
             {
-                dt=kn.layDL(sqlStr);               
+                dt=kn.layDL(sqlStr);
+                dt2 = kn.layDL(sqlStr2);
             }
             catch (Exception)
             {
-
                 throw;
             }
             DataList1.DataSource = dt;

@@ -33,7 +33,7 @@
                     <a class="navbar-brand" href="#">
                         <img src="img/logo.jpg" alt="Logo" style="width: 175px; height: 175px;" /></a>
                 </div>
-                <ul class="nav navbar-nav" style="padding-top: 50px; padding-left: 125px;">
+                <ul class="nav navbar-nav" style="padding-top: 50px; padding-left: 125px; height:150px">
                     <li class="navbar-item active"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Trang chủ</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Tin tức</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Tuyển dụng</a></li>
@@ -41,25 +41,31 @@
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-wrench"></span>&nbsp;Bảo hành</a></li>
                     <li class="navbar-item"><a class="nav-link h3" href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Liên hệ</a></li>
                 </ul>
-                <ul class=" nav navbar-nav navbar-right" style="padding-top: 50px; padding-right: 50px;">
-                    <li>
-                        <button type="button" data-toggle="modal" data-target="#loginModal" class="nav-link h3"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</button></li>
-                </ul>
+                <div id="loginGrp" class="nav navbar-nav" style="padding-top: 10px;padding-right: 50px; position:absolute; right:0; bottom:0; height:100px">
+                    
+                        <button id="btnLogin" runat="server" type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Login</button>
+                    
+                        <button id="btnCart" visible="false" runat="server" type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;&nbsp;Cart</button>
+                   
+                        <button id="btnProfile" visible="false" runat="server" type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Profile</button>
+                    
+                        <button id="btnLogOut" visible="false" runat="server" type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;LogOut</button>                  
+                </div>
                 <%--                <div class="navbar-form navbar-right" style="padding-top: 50px; padding-right: 50px;">
                       <button style="float: right; height: 40px;" type="submit">Tìm kiếm</button>
                     <input style="float: right; height: 40px;" type="text" placeholder="Nhập nội dung tìm kiếm" />
                 </div>--%>
-                <div class="input-group" style="float:right; padding-top:75px; padding-right:75px;">
-                    <div class="form-outline" style="float:left;">
-                        <input type="search" id="form1" class="form-control" placeholder="Search" />
+                <div class="input-group" style="position: absolute; top:20px; right:150px; z-index:3;">
+                    <div class="form-outline" style="float: left;">
+                        <input type="search" class="form-control" placeholder="Search" />
                     </div>
-                    <button type="button" class="btn btn-primary" style="float:left;">
+                    <button type="button" class="btn btn-primary" style="float: left;">
                         <i class="glyphicon glyphicon-search"></i>
                     </button>
                 </div>
             </div>
         </nav>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%;background-color:white;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%; background-color: white;">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -115,60 +121,64 @@
             </a>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <!-- Centered Tabs -->
-                        <ul class="nav nav-pills nav-justified">
-                            <li class="active h3"><a id="link1" title="Đăng Nhập" data-toggle="pill" href="#tab1">Đăng nhập</a></li>
-                            <li class="h3"><a id="link2" title="Đăng Ký" data-toggle="pill" href="#tab2">Đăng ký</a></li>
-                        </ul>
-                    </div>
-                    <div class="modal-body" style="text-align: center">
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="tab1">
-                                <h1 class="display-4">Chào mừng bạn trở lại</h1>
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <label class="h3" for="uname"><span style="font-size: 50px" class="glyphicon glyphicon-user"></span>&nbsp;</label>
-                                    <input class="h3" style="width: 80%; height: 50px" type="text" placeholder="Tên đăng nhập*" name="tdn" required="required" />
+        <asp:Panel runat="server" DefaultButton="Button1">
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- Centered Tabs -->
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="active h3"><a id="link1" title="Đăng Nhập" data-toggle="pill" href="#tab1">Đăng nhập</a></li>
+                                <li class="h3"><a id="link2" title="Đăng Ký" data-toggle="pill" href="#tab2">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                        <div class="modal-body" style="text-align: center">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1">
+                                    <h1 class="display-4">Chào mừng bạn trở lại</h1>
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <label class="h3" for="uname"><span style="font-size: 50px" class="glyphicon glyphicon-user"></span>&nbsp;</label>
+                                        <input id="txtUser" runat="server" class="h3" style="width: 80%; height: 50px" type="text" placeholder="Tên đăng nhập*" name="tdn" required />
+                                    </div>
+                                    <br />
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <label class="h3" for="psw"><span style="font-size: 50px" class="glyphicon glyphicon-lock"></span>&nbsp;</label>
+                                        <input id="txtPassword" runat="server" class="h3" style="width: 80%; height: 50px" type="password" placeholder="Mật khẩu*" name="pw" required />
+                                    </div>
+                                    <%--<button type="submit" style="font-size: 50px" class="btn btn-primary btn-block btn-lg">Đăng nhập</button>--%>
+                                    <asp:Button ID="Button1" Style="font-size: 50px" CssClass="btn btn-primary btn-block btn-lg" runat="server" Text="Đăng nhập" OnClick="Button1_Click" UseSubmitBehavior="false" data-dismiss="modal" />
                                 </div>
-                                <br />
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <label class="h3" for="psw"><span style="font-size: 50px" class="glyphicon glyphicon-lock"></span>&nbsp;</label>
-                                    <input class="h3" style="width: 80%; height: 50px" type="password" placeholder="Mật khẩu*" name="pw" required="required" />
+                                <div class="tab-pane fade" id="tab2">
+                                    <h1 class="display-4">Đăng ký miễn phí</h1>
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <input class="h3" style="width: 500px; height: 50px; float: left; margin-right: 50px;" type="text" placeholder="Họ*" name="ho" required="required" />
+                                        <input class="h3" style="width: 150px; height: 50px; float: right;" type="text" placeholder="Tên*" name="ten" required="required" />
+                                    </div>
+                                    <br />
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <input class="h3" style="width: 700px; height: 50px;" type="email" placeholder="Địa chỉ email*" name="email" required="required" />
+                                    </div>
+                                    <br />
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <input class="h3" style="width: 700px; height: 50px;" type="text" placeholder="Tên đăng nhập*" name="tdn_DK" required="required" />
+                                    </div>
+                                    <br />
+                                    <div class="container-fluid" style="display: flex; justify-content: center;">
+                                        <input class="h3" style="width: 700px; height: 50px;" type="password" placeholder="Mật khẩu*" name="pw_DK" required="required" />
+                                    </div>
+                                    <br />
+                                    <button type="submit" style="font-size: 50px" class="btn btn-primary btn-block btn-lg">Tạo tài khoản</button>
                                 </div>
-                                <button type="submit" style="font-size: 50px" class="btn btn-primary btn-block btn-lg">Đăng nhập</button>
-                            </div>
-                            <div class="tab-pane fade" id="tab2">
-                                <h1 class="display-4">Đăng ký miễn phí</h1>
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <input class="h3" style="width: 500px; height: 50px; float: left; margin-right: 50px;" type="text" placeholder="Họ*" name="ho" required="required" />
-                                    <input class="h3" style="width: 150px; height: 50px; float: right;" type="text" placeholder="Tên*" name="ten" required="required" />
-                                </div>
-                                <br />
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <input class="h3" style="width: 700px; height: 50px;" type="email" placeholder="Địa chỉ email*" name="email" required="required" />
-                                </div>
-                                <br />
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <input class="h3" style="width: 700px; height: 50px;" type="text" placeholder="Tên đăng nhập*" name="tdn_DK" required="required" />
-                                </div>
-                                <br />
-                                <div class="container-fluid" style="display: flex; justify-content: center;">
-                                    <input class="h3" style="width: 700px; height: 50px;" type="password" placeholder="Mật khẩu*" name="pw_DK" required="required" />
-                                </div>
-                                <br />
-                                <button type="submit" style="font-size: 50px" class="btn btn-primary btn-block btn-lg">Tạo tài khoản</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </asp:Panel>
+
         <div class="container-fluid banner">
             <img src="img/banners/blackFriday.gif" alt="Banner gif" width="100%" />
         </div>
